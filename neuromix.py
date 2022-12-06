@@ -1,8 +1,10 @@
 
+
+
 """ brain.py """
 
 utils = {'generate_substrate': 0,
-         'activation_funciton': 0}
+         'activation_function': 0}
 
 substrate = {'init': 0,
              'step': 0,
@@ -52,10 +54,10 @@ protein = {'init': [['Protein', 'check_dna']],
            'check_dna': 0,
            'get_trainable_params': 0,
            'initialize': [['Protein', 'update_dna']],
-           'collect_input', 0,
-           'get_trainable_params', 0,
+           'collect_input': 0,
+           'get_trainable_params': 0,
            'update_dna': 0,
-           'reset', 0}
+           'reset': 0}
 
 
 cell = {'init': [['Cell', 'check_dna'],
@@ -231,4 +233,20 @@ grapher = {'init': [],
            'build': [],
            'set-pause': []}
 
+
+
+########################################################
+
+classes_dict = {'Substrate': substrate,
+                'SubstrateStructure': substrateStructure,
+                'Protein': protein,
+                'Cell': cell,
+                'CellPlasticity': cellPlasticity,
+                'TestMap': testmap,
+                'Gym': gym,
+                'AgentEvo': agentevo,
+                'SimpleEvolution': simple_evolution,
+                'DnaGenerator': dna_generator,
+                'Grapher': grapher,
+                'Utils': utils}
 
