@@ -77,7 +77,11 @@ class Manager:
             results = classes_dict[query_name]
             
         else:
-            results = classes_dict[reference_class][query_name]
+            try:
+                results = classes_dict[reference_class][query_name]
+            except KeyError:
+                print(f"!KeyError: reference class: {reference_class}, query: {query_name}\n\n")
+                raise 
 
         # end of a branch
         if results == 0:
