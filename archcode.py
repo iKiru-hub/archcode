@@ -105,7 +105,8 @@ class Manager:
         # end of a branch
         if results == 0:
             self.display()
-            self.depth -= 1 * (k == 0)
+            self.depth -= 1 * k #(k == 0)
+            print('back to ', self.depth, f' [-{k}]')
             self.counter += 1
             return
 
@@ -115,8 +116,10 @@ class Manager:
         # create new branches
         new_branch = []
         for i, result in enumerate(results): 
-            new_branch += [[result[0], [0, result[1], size-i-1]]]
-    
+            #new_branch += [[result[0], [0, result[1], size-i-1]]]
+            new_branch += [[result[0], [0, result[1], size-1]]]
+            
+
         # append new branches at the current counter timestep
         self.chain = self.chain[:self.counter+1] + new_branch + self.chain[self.counter+1:]
 
