@@ -165,9 +165,9 @@ class Manager:
 if __name__ == '__main__':
 
     docstr = "\nArchcode: a way to inspect the structure of neuromix\n--------\n\nParameters"
-    docstr += "\n----------\narg 0 : str\n    - 'all' -> print all available classes\n   - "
-    docstr += "$class\narg 1 : str\n    - None -> print all methods for $class\n   - "
-    docstr += "$method -> print all classes involved in the method and their methods\n"
+    docstr += "\n----------\narg 0 : str\n   - 'all' -> print all available classes\n   - "
+    docstr += "$class\narg 1 : str [optional]\n   - None -> print all methods for $class\n   - "
+    docstr += "$method -> print all classes involved in $method and their methods\n"
     docstr += "\nReturns\n-------\nNone"
 
     args = sys.argv[1:]
